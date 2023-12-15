@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Summarization</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .jumbotron {
+            background-color: #ECBF83;
+            color: white;
+        }
+        .original_title {
+            font-size: 20px;
+            font-weight: bold;
+            justify-content: center;
+            padding: 2px;
+            display: flex;
+        }
+        .summary_title {
+            font-size: 20px;
+            font-weight: bold;
+            justify-content: center;
+            padding: 2px;
+            display: flex;
+            background-color: #f2af58;
+            color: white;
+        }
+        .srt{
+            display: flex;
+            flex-direction: row;
+        }
+        .originalTxt{
+            font-size: 18px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            height: 300px;
+            overflow-y: auto;
+        }
+        .summaryTxt{
+            font-size: 18px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            height: 300px;
+            overflow-y: auto;
+            background-color: #daffdb;
+            margin-left: 10px;
+        }
+        .heading {
+            font-weight: bold;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4 heading">Text Summarization</h1>
+              <p class="lead">Make all sentences short, english text only</p>
+            </div>
+        </div>
+        
+        <div class="container" style="display: flex; justify-content: space-around;">
+            <p class="original_title col-sm-4">Original text</p>
+            <p class="summary_title col-sm-4">Summary</p>
+        </div>
+
+        <div class="srt">
+            <p class="originalTxt col-sm-6">{{original_txt}}</p>
+            <p class="summaryTxt col-sm-6">{{summary}}</p>
+        </div>
+        
+        <!-- <div class="container">
+            <button class="btn btn-danger" type="submit" >Words: {{len_orig_txt}}</button>
+            <button class="btn btn-success" type="submit" style="margin-left: 500px">Words: {{len_summmary}}</button>
+        </div> -->
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
